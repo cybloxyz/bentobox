@@ -15,6 +15,7 @@
       id: `siap untuk tes memasakmu?`, 
       en: `ready to take cooking test?` 
     },
+    say3: { id: `klik tombol 'masak'!`, en: `click the 'cook' button!` },
     staff: { id: `TERATAS!`, en: `TOP!` },
   };
 
@@ -22,7 +23,7 @@
     // 1. Logic Loading Screen (2 detik)
     setTimeout(() => {
       isLoading = false;
-    }, 2000);
+    }, 1000);
 
     // 2. Logic Auto Detect Lokasi (pindahan dari App.jsx)
     fetch(`https://ipapi.co/json/`)
@@ -50,21 +51,24 @@
       
       <section id="hero" class="pt-48 pb-20 flex justify-center items-center">
         <div 
-          class="flex justify-center items-center p-2 min-h-92 bg-[#ddbc93] w-[90%] max-w-237.5 border-[#380d07] border-12 md:border-24 rounded-3xl shadow-lg shadow-black/30"
+          class="flex justify-center items-center mt-48 p-2 min-h-92 bg-[#ddbc93] w-[90%] max-w-237.5 border-[#380d07] border-12 md:border-24 rounded-3xl shadow-lg shadow-black/30"
           in:fly={{ y: 50, duration: 1000 }}
         >
           <div class="text-center px-4">
             <h1 class="text-4xl md:text-7xl mb-8 text-white drop-shadow-lg">
               {content.say[$language]}
             </h1>
-            <p class="text-lg md:text-2xl mb-12 text-white font-medium">
+            <p class="text-lg md:text-2xl mb-6 text-white font-medium">
               {content.say2[$language]}
+            </p>
+            <p class="text-sm md:text-lg mb-8 text-white font-medium">
+              {content.say3[$language]}
             </p>
           </div>
         </div>
       </section>
 
-      <section id="best" class="mt-24 pb-20">
+ <!--     <section id="best" class="mt-24 pb-20">
         <div class="flex justify-center items-center mb-12">
           <h1 class="bg-[#713822] text-white rounded-full px-10 py-4 text-center text-3xl md:text-5xl pgm shadow-xl">
             {content.staff[$language]}
@@ -72,7 +76,7 @@
         </div>
         <Bentobox />
       </section>
-
+-->
 
     </div>
   </div>
