@@ -33,7 +33,7 @@
       on:click={changelang}
     >
       <img src="/{$language}.webp" alt="flag" class="imeg-f inline-block lg:mr-2 md:mr-2 mr-0" />
-      <span class="brand-text">BENTOBOX</span>
+      <span class="brand-text">COOQUIZZ</span>
     </button>
   </div>
           
